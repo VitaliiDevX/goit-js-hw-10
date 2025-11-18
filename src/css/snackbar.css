@@ -1,0 +1,157 @@
+.form {
+  width: 360px;
+  margin: 20px auto;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------- Delay label -------- */
+.form > label {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+.form input[type='number'] {
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  outline: none;
+}
+
+.form input[type='number']:hover {
+  border-color: #000;
+  color: #000;
+}
+
+.form input[type='number']:focus {
+  border-color: #4e75ff;
+  color: #000;
+}
+
+/* -------- Fieldset -------- */
+fieldset {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  padding-top: 26px;
+  padding-bottom: 6px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  margin-bottom: 26px;
+}
+
+fieldset:hover {
+  border-color: #000;
+}
+
+legend {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 0;
+  text-align: left;
+  padding: 0 6px;
+}
+
+.form input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.custom-radio {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #757575;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  margin-right: 14px;
+  transition: border-color 0.25s ease;
+}
+
+.custom-radio::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: #4e75ff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.25s ease;
+}
+
+input[type='radio']:checked + .custom-radio {
+  border-color: #4e75ff;
+}
+
+input[type='radio']:checked + .custom-radio::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+fieldset label {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+}
+
+/* -------- Button -------- */
+.form button {
+  background-color: #4e75ff;
+  color: white;
+  padding: 12px 0;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.24s;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.form button:hover {
+  background: #6c8cff;
+}
+
+.ok-toast .iziToast-close {
+  background-image: url('../img/close.svg') !important;
+  background-size: 16px 16px !important;
+  background-position: center !important;
+}
+
+.ok-toast .iziToast-close:before {
+  display: none !important;
+}
